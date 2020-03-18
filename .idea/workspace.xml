@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b18548e-d048-47da-b689-0bb3edace56b" name="Default Changelist" comment="" />
+    <list default="true" id="1b18548e-d048-47da-b689-0bb3edace56b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9e8d20db-cb39-47ec-9cb7-4f9c3df1efe9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9e8d20db-cb39-47ec-9cb7-4f9c3df1efe9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrganisationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrganisationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_17_084345_create_organisations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_17_084345_create_organisations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/closed/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/closed/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ru/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/closed/admin/organisations/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/closed/admin/organisations/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/closed.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/closed.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,14 +158,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1ZCXjmOf175nybDi6aBIP4WZ9nl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -212,7 +225,9 @@
       <workItem from="1584431184238" duration="15555000" />
       <workItem from="1584451766686" duration="11543000" />
       <workItem from="1584516137411" duration="2398000" />
-      <workItem from="1584518554332" duration="1598000" />
+      <workItem from="1584518554332" duration="5918000" />
+      <workItem from="1584524831497" duration="10870000" />
+      <workItem from="1584554783637" duration="273000" />
     </task>
     <servers />
   </component>

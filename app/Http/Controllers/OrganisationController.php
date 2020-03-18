@@ -8,7 +8,7 @@ class OrganisationController extends Controller
 {
     public function index()
     {
-        $organisations = \App\Organisation::simplePaginate(10);
+        $organisations = \App\Organisation::paginate(10);
         return view('closed.admin.organisations.index', [
             'organisations' => $organisations
         ]);

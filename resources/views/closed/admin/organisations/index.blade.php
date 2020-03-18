@@ -28,12 +28,12 @@
                         </td>
                         <td class="td-center">
                             <a href="/admin/organisations/{{$organisation->id}}/edit"
-                               class="btn btn-primary"><i class="fas fa-pen"></i></a></td>
+                               class="btn btn-sm btn-primary"><i class="fas fa-pen"></i></a></td>
                         <td class="td-center">
                             <a href="javascript:void(0);"
                                onclick="event.preventDefault();
                                  this.nextElementSibling.submit();"
-                               class="btn btn-danger"><i class="fas fa-times"></i></a>
+                               class="btn btn-sm btn-danger"><i class="fas fa-times"></i></a>
                             <form action="/admin/organisations/{{$organisation->id}}" method="post" style="display: none;">
                                 @csrf
                                 @method('DELETE')

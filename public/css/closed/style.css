@@ -168,7 +168,17 @@ h5 {
 	border-radius: 4px;
 	text-decoration: none;
     padding: 6px 12px;
+    margin: 4px 0;
+    display: inline-block;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-sm {
+    padding: 2px 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 3px;
+    margin: 0;
 }
 
 .btn-lg {
@@ -533,6 +543,14 @@ textarea {
 }
 
 .page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.page-item span {
     color: #6c757d;
     pointer-events: none;
     cursor: auto;

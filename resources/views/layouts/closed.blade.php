@@ -26,6 +26,13 @@
             <p class="text-muted sidebar-header">Администрирование</p>
             <ul class="sidebar-list">
                 <li><a href="/admin/organisations"><i class="fas fa-chart-bar"></i> Учреждения</a></li>
+                <li><a href="/admin/associations"><i class="fas fa-chart-bar"></i> Объединения</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-node">
+            <p class="text-muted sidebar-header">Связи</p>
+            <ul class="sidebar-list">
+                <li><a href="/admin/association-organisation"><i class="fas fa-chart-bar"></i> Объединение - Учреждение</a></li>
             </ul>
         </div>
     </aside>
