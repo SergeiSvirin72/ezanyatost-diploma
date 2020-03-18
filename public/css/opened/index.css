@@ -1,0 +1,102 @@
+/* HEADING */
+.heading {
+	text-align: center;
+}
+
+/* CAROUSEL */
+.carousel {
+	padding-bottom: 32px;
+}
+
+.carousel-container {
+  max-width: 900px;
+  position: relative;
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+}
+
+.carousel-slide {
+	display: none;
+}
+
+.carousel-slide img {
+	vertical-align: bottom;
+	width: 100%;
+	background-color: #777777;
+	object-fit: cover;
+	object-position: center;
+}
+
+.carousel-prev, .carousel-next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	padding: 16px;
+	color: white;
+	font-size: 18px;
+	transition: 0.2s ease;
+	user-select: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel-next {
+	right: 0;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+	color: gray;
+}
+
+.carousel-text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-dots {
+	text-align: center;
+}
+
+.carousel-dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot-active, .carousel-dot:hover {
+  background-color: #717171;
+}
+
+.carousel-fade {
+  animation-name: carousel-fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes carousel-fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* ORGANISATIONS */
+.organisations {
+	background-color: #f8f9fa;
+}
+
+.full-wrapper {
+	text-align: right;
+	padding: 8px;
+}

@@ -1,0 +1,14 @@
+.event-img {
+	text-align: center;
+	margin: 32px 0;
+}
+
+.event-img img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 400px;
+	border-radius: 4px;
+	margin: 0 32px 0 0;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+}

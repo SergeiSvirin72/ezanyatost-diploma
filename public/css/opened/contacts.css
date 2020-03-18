@@ -1,0 +1,19 @@
+.contacts-upper {
+	display: flex;
+	flex-direction: row;
+	align-items: top;
+	flex-wrap: wrap;
+}
+
+.contacts-column {
+	flex: 1;
+	margin-bottom: 32px;
+}
+
+.contacts-column:first-child {
+	margin-right: 32px;
+}
+
+.contacts-column .form-control {
+	width: 100%;
+}

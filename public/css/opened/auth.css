@@ -1,0 +1,19 @@
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+main .btn {
+	width: 100%;
+}
+
+.auth {
+	max-width: 258px;
+	width: 100%;
+}
+
+
+
