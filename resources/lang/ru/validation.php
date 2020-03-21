@@ -164,7 +164,7 @@ return [
 
     'attributes' => [
         'name'                  => 'Наименование',
-        'username'              => 'Никнейм',
+        'username'              => 'Логин',
         'email'                 => 'Электронный адрес',
         'first_name'            => 'Имя',
         'last_name'             => 'Фамилия',
@@ -204,5 +204,10 @@ return [
         'fax'                   => 'Факс',
         'course'                => 'Направление',
         'course_id'             => 'Направление',
+        'association_id'        => 'Объединение',
+        'activity_id'           => 'Занятие',
+        'role_id'               => 'Роль',
+        'organisation_id'       => 'Учреждение',
+        'teacher_id'            => 'Преподаватель',
     ],
 ];

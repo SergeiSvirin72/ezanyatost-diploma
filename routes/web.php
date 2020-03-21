@@ -65,14 +65,46 @@ Route::group(['middleware' => 'auth'], function() {
         Route::delete('associations/{association}',
             'AssociationController@destroy');
 
-        // Association - Organisation
-        Route::get('association-organisation',
-            'AssociationOrganisationController@index');
-        Route::get('association-organisation/create',
-            'AssociationOrganisationController@create');
-        Route::post('association-organisation',
-            'AssociationOrganisationController@store');
-        Route::delete('association-organisation/{id}',
-            'AssociationOrganisationController@destroy');
+        // Activities
+        Route::get('activities',
+            'ActivityController@index');
+        Route::get('activities/create',
+            'ActivityController@create');
+        Route::post('activities',
+            'ActivityController@store');
+        Route::delete('activities/{activity}',
+            'ActivityController@destroy');
+
+        // Users
+        Route::get('users',
+            'UserController@index');
+        Route::get('users/create',
+            'UserController@create');
+        Route::post('users',
+            'UserController@store');
+        Route::delete('users/{user}',
+            'UserController@destroy');
+
+        // Employment
+        Route::get('employments',
+            'EmploymentController@index');
+        Route::get('employments/create',
+            'EmploymentController@create');
+        Route::post('employments',
+            'EmploymentController@store');
+        Route::delete('employments/{employment}',
+            'EmploymentController@destroy');
+        Route::post('/employments/fetch-associations',
+            'EmploymentController@fetchAssociations');
+
+        // Schedules
+        Route::get('schedules',
+            'ScheduleController@index');
+        Route::get('schedules/create',
+            'ScheduleController@create');
+        Route::post('schedules',
+            'ScheduleController@store');
+        Route::delete('schedules/{schedule}',
+            'ScheduleController@destroy');
     });
 });

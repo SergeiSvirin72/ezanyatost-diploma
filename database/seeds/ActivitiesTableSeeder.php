@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class AssociationOrganisationSeeder extends Seeder
+class ActivitiesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,8 +14,8 @@ class AssociationOrganisationSeeder extends Seeder
         $associations = \App\Association::all();
 
         \App\Organisation::all()->each(function ($organisation) use ($associations) {
-            $associations->random(rand(10, 15))->each(function ($association) use ($organisation) {
-                $association = \App\AssociationOrganisation::create([
+            $associations->random(rand(3, 5))->each(function ($association) use ($organisation) {
+                $association = \App\Activity::create([
                     'association_id' => $association->id,
                     'organisation_id' => $organisation->id,
                 ]);

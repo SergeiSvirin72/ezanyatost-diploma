@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b18548e-d048-47da-b689-0bb3edace56b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9e8d20db-cb39-47ec-9cb7-4f9c3df1efe9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9e8d20db-cb39-47ec-9cb7-4f9c3df1efe9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrganisationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrganisationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_17_084345_create_organisations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_17_084345_create_organisations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AssociationOrganisation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Activity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AssociationOrganisationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ActivityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckRole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_18_111811_create_association_organisation_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_18_111811_create_activities_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/AssociationOrganisationSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ActivitiesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CoursesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CoursesTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/closed/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/closed/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/OrganisationsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/OrganisationsTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ru/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/closed/admin/association_organisation/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/closed/admin/activities/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/closed/admin/association_organisation/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/closed/admin/activities/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/closed/admin/associations/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/closed/admin/associations/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/closed/admin/associations/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/closed/admin/associations/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/closed/admin/organisations/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/closed/admin/organisations/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/closed.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/closed.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -227,7 +237,9 @@
       <workItem from="1584516137411" duration="2398000" />
       <workItem from="1584518554332" duration="5918000" />
       <workItem from="1584524831497" duration="10870000" />
-      <workItem from="1584554783637" duration="273000" />
+      <workItem from="1584554783637" duration="5077000" />
+      <workItem from="1584602481837" duration="16626000" />
+      <workItem from="1584791994368" duration="11108000" />
     </task>
     <servers />
   </component>

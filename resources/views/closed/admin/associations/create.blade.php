@@ -22,13 +22,12 @@
         <div class="form-group">
             <label>Направление:</label>
             <select name="course_id" class="form-control form-control-block">
-                @forelse($courses as $course)
+                <option value="">Выберите направление</option>
+                @foreach($courses as $course)
                     <option value="{{$course->id}}" {{ (old('course_id') == $course->id ? "selected":"") }}>
                         {{$course->name}}
                     </option>
-                @empty
-                    <option selected disabled>Направлений пока нет</option>
-                @endforelse
+                @endforeach
             </select>
         </div>
         <button type="submit" class="btn btn-success">Добавить объединение</button>

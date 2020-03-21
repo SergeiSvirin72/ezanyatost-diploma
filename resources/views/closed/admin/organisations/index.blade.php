@@ -14,8 +14,8 @@
                 <tr>
                     <th>ID</th>
                     <th>Наименование</th>
-                    <th>Редактировать</th>
-                    <th>Удалить</th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>

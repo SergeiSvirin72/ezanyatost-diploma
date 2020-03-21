@@ -27,12 +27,15 @@
             <ul class="sidebar-list">
                 <li><a href="/admin/organisations"><i class="fas fa-chart-bar"></i> Учреждения</a></li>
                 <li><a href="/admin/associations"><i class="fas fa-chart-bar"></i> Объединения</a></li>
+                <li><a href="/admin/schedules"><i class="fas fa-chart-bar"></i> Расписания</a></li>
+                <li><a href="/admin/users"><i class="fas fa-chart-bar"></i> Пользователи</a></li>
             </ul>
         </div>
         <div class="sidebar-node">
             <p class="text-muted sidebar-header">Связи</p>
             <ul class="sidebar-list">
-                <li><a href="/admin/association-organisation"><i class="fas fa-chart-bar"></i> Объединение - Учреждение</a></li>
+                <li><a href="/admin/activities"><i class="fas fa-chart-bar"></i> Объединение - Учреждение</a></li>
+                <li><a href="/admin/employments"><i class="fas fa-chart-bar"></i> Преподаватель - Занятие</a></li>
             </ul>
         </div>
     </aside>

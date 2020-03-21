@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAssociationOrganisationTable extends Migration
+class CreateSchedulesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateAssociationOrganisationTable extends Migration
      */
     public function up()
     {
-        Schema::create('association_organisation', function (Blueprint $table) {
+        Schema::create('schedules', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('association_id');
-            $table->foreignId('organisation_id');
-            $table->unique(['association_id', 'organisation_id']);
+            $table->foreignId('employment_id');
+            $table->integer('weekday');
+            $table->time('start', 0);
+            $table->time('end', 0);
+            $table->string('classroom');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateAssociationOrganisationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('association_organisation');
+        Schema::dropIfExists('schedules');
     }
 }

@@ -18,9 +18,9 @@ class CoursesTableSeeder extends Seeder
             'Духовно-нравственное',
         ];
 
-        foreach ($courses as $course_name) {
+        foreach ($courses as $course) {
             \App\Course::create([
-                'name' => $course_name,
+                'name' => $course,
             ]);
         }
     }

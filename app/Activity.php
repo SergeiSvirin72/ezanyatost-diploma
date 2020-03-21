@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class AssociationOrganisation extends Pivot
+class Activity extends Pivot
 {
-
+    protected $table = 'activities';
 }

@@ -17,7 +17,7 @@ class CheckRole
     public function handle($request, Closure $next, ...$roles)
     {
         foreach ($roles as $role) {
-            if (\Auth::user()['role'] === (int)$role) {
+            if (\Auth::user()['role_id'] === (int)$role) {
                 return $next($request);
             }
         }
