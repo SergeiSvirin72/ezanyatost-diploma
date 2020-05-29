@@ -18,7 +18,7 @@ $factory->define(Organisation::class, function (Faker $faker) {
     return [
         'full_name' => $name,
         'short_name' => $name,
-        'director' => $faker->name,
+        //'director' => $faker->name,
         'reception' => $reception.':00 - '.($reception + 2).':00',
         'legal_address' => $address,
         'actual_address' => $address,

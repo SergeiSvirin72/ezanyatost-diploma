@@ -15,37 +15,65 @@ class AssociationsTableSeeder extends Seeder
             [
                 'Юный эколог',
                 'Проектная деятельность по биологии',
-                'Клуб «Юный правовед»',
+                'Юный правовед',
                 'Мой друг - компьютер',
                 'Робототехника',
+                'Лаборатория интеллекта',
+                'Практикум по географии',
+                'Математическое моделирование',
+                'Компьютерное моделирование',
+                'Химический практикум',
             ],
             [
                 'Пионербол',
                 'Воллейбол',
                 'Футбол',
                 'ОФП',
-                'Эстетическая гимнастика',
                 'Экологический туризм',
+                'Прикладное плавание',
+                'Атлетическая гимнастика',
             ],
             [
                 'Рукоделие',
-                'Изостудия «Радуга»',
+                'Изостудия',
                 'Кружок по деревообработке',
                 'Вокальная студия',
+                'Искусство общения',
+                'Творческая лаборатория',
+                'Хореографическая студия',
+                'Хоровая студия',
             ],
             [
-                'Основы духовно-нравственной культуры народов России',
+                'Духовная культура России',
                 'Активисты школьного музея',
+                'Литературный кружок',
+                'Исторический клуб',
+                'Человек и общество',
+                'Мир вокруг нас',
             ],
         ];
 
-        \App\Course::all()->each(function ($course) use ($associations) {
-            foreach ($associations[($course->id)-1] as $name) {
-                $association = \App\Association::create([
-                    'name' => $name,
-                    'course_id' => $course->id,
-                ]);
-            };
-        });
+//        \App\Course::all()->each(function ($course) use ($associations) {
+//            foreach ($associations[($course->id)-1] as $name) {
+//                $association = \App\Association::create([
+//                    'name' => $name,
+//                    'course_id' => $course->id,
+//                ]);
+//            };
+//        });
+
+        $organisations = \App\Organisation::count();
+        for($i = 0; $i < count($associations); ++$i) {
+            foreach ($associations[$i] as $association) {
+                \App\Organisation::all()->random(rand(1, $organisations))
+                    ->each(function ($organisation) use ($association, $i) {
+                    $assoc = \App\Association::create([
+                        'name' => $association,
+                        'course_id' => $i + 1,
+                        'organisation_id' => $organisation->id,
+                    ]);
+                });
+            }
+        }
     }
 }

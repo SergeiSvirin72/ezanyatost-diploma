@@ -40,9 +40,8 @@
                    class="form-control form-control-block">
         </div>
         <div class="form-group">
-            <label>Роль:</label>
+            <label>Роль</label>
             <select name="role_id" class="form-control form-control-block">
-                <option value="">Выберите роль</option>
                 @foreach($roles as $role)
                     <option value="{{$role->id}}" {{ (old('role_id') == $role->id ? "selected":"") }}>
                         {{$role->name}}

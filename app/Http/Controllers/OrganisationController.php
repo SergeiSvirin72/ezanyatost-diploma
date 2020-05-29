@@ -10,13 +10,24 @@ class OrganisationController extends Controller
     {
         $organisations = \App\Organisation::paginate(10);
         return view('closed.admin.organisations.index', [
-            'organisations' => $organisations
+            'organisations' => $organisations,
         ]);
+    }
+
+    public function fetchData() {
+        $organisations = \App\Organisation::orderBy(request()->get('column_name'), request()->get('sort_type'))
+            ->paginate(10);
+        return view('closed.admin.organisations.index_data', [
+            'organisations' => $organisations,
+        ])->render();
     }
 
     public function create()
     {
-        return view('closed.admin.organisations.create');
+        $directors = \App\User::where('role_id', 2)->get();
+        return view('closed.admin.organisations.create', [
+            'directors' => $directors,
+        ]);
     }
 
     public function store()
@@ -24,7 +35,7 @@ class OrganisationController extends Controller
         $data = request()->validate([
             'full_name' => 'required',
             'short_name' => 'required',
-            'director' => 'required|alpha_space',
+            'director_id' => 'required|unique:organisations',
             'reception' => 'required',
             'legal_address' => 'required',
             'actual_address' => 'required',
@@ -43,17 +54,26 @@ class OrganisationController extends Controller
             $path = explode('/', $path);
             unset($path[0]);
             $path = implode('/', $path);
-
         } else {
             $path = null;
         }
         $organisation->update(['img' => $path]);
 
-        return back()->with('success', 'Учреждение успешно добавлено');
+        return back()->with('success', 'Запись успешно добавлена');
     }
 
     public function show($id) {
-        $organisation = \App\Organisation::findOrFail($id);
+        if(!\DB::table('organisations')->where('id', $id)->exists()) abort(404);
+
+        $organisation = \DB::table('organisations')
+            ->join('users',
+                'organisations.director_id',
+                '=',
+                'users.id')
+            ->select('organisations.*', 'users.name as director')
+            ->where('organisations.id', $id)
+            ->first();
+
         return view('closed.admin.organisations.show', [
             'organisation' => $organisation
         ]);
@@ -61,8 +81,10 @@ class OrganisationController extends Controller
 
     public function edit($id) {
         $organisation = \App\Organisation::findOrFail($id);
+        $directors = \App\User::where('role_id', 2)->get();
         return view('closed.admin.organisations.edit', [
-            'organisation' => $organisation
+            'organisation' => $organisation,
+            'directors' => $directors,
         ]);
     }
 
@@ -72,7 +94,7 @@ class OrganisationController extends Controller
         $data = request()->validate([
             'full_name' => 'required',
             'short_name' => 'required',
-            'director' => 'required|alpha_space',
+            'director_id' => 'required|unique:organisations,director_id,'.$id,
             'reception' => 'required',
             'legal_address' => 'required',
             'actual_address' => 'required',
@@ -102,9 +124,17 @@ class OrganisationController extends Controller
         if ($organisation->img) {
             \Storage::delete('/public/'.$organisation->img);
         }
-
+//        $associations = \App\Association::where('organisation_id', $id)->pluck('id');
+//        $attendances = \App\Attendance::whereIn('association_id', $associations)->delete();
+//        $homeworks = \App\Homework::whereIn('association_id', $associations)->delete();
+//        $involvements = \App\Involvement::whereIn('association_id', $associations)->delete();
+//        $teachers = \App\Teacher::whereIn('association_id', $associations)->pluck('id');
+//        $schedules = \App\Schedule::whereIn('teacher_id', $teachers)->delete();
+//        $teachers = \App\Teacher::whereIn('association_id', $associations)->delete();
+//        $associations = \App\Association::where('organisation_id', $id)->delete();
+//        $events = \App\Event::where('organisation_id', $id)->delete();
         $organisation->delete();
-        return back()->with('success', 'Учреждение успешно удалено');
+        return false;
     }
 
     public function delete_image($id) {

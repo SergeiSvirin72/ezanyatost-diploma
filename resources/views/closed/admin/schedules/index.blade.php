@@ -7,50 +7,56 @@
            class="btn btn-success"><i class="fas fa-plus"></i> Добавить расписание</a>
     </div>
 
-    @if(count($schedules))
-        <div class="table-wrapper">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Объединение</th>
-                    <th>Учреждение</th>
-                    <th>День недели</th>
-                    <th>Начало</th>
-                    <th>Конец</th>
-                    <th>Преподаватель</th>
-                    <th>Класс</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($schedules as $schedule)
-                    <tr>
-                        <td class="td-center">{{$schedule->id}}</td>
-                        <td class="td-center">{{$schedule->association}}</td>
-                        <td class="td-center">{{$schedule->organisation}}</td>
-                        <td class="td-center">{{$weekdays[$schedule->weekday]}}</td>
-                        <td class="td-center">{{$schedule->start}}</td>
-                        <td class="td-center">{{$schedule->end}}</td>
-                        <td class="td-center">{{$schedule->teacher}}</td>
-                        <td class="td-center">{{$schedule->classroom}}</td>
-                        <td class="td-center">
-                            <a href="javascript:void(0);"
-                               onclick="event.preventDefault();
-                                 this.nextElementSibling.submit();"
-                               class="btn btn-sm btn-danger"><i class="fas fa-times"></i></a>
-                            <form action="/admin/schedules/{{$schedule->id}}" method="post" style="display: none;">
-                                @csrf
-                                @method('DELETE')
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
+    <form name="fetch">
+        @csrf
+        <input type="hidden" name="page" value="1">
+        <input type="hidden" name="column_name" value="weekdays.id">
+        <input type="hidden" name="sort_type" value="asc">
+
+        <div class="form-group form-group-row">
+            <input type="text" name="search" class="form-control form-control-block" placeholder="Поиск...">
+            <button type="submit" name="submit" class="btn btn-primary btn-block">
+                <i class="fas fa-search"></i><span>Найти</span>
+            </button>
         </div>
-        {{ $schedules->links() }}
-    @else
-        <div>Расписаний пока нет. Добавьте новое расписание.</div>
-    @endif
+    </form>
+
+    <div class="table-wrapper table-scroll">
+        <table class="table">
+            <thead>
+            <tr>
+                <th data-sort_type="asc"
+                    data-column_name="association"
+                    class="sorting">Объединение <span id="association_icon"></span></th>
+                <th data-sort_type="asc"
+                    data-column_name="weekdays.id"
+                    class="sorting">День недели <span id="weekdays.id_icon"></span></th>
+                <th data-sort_type="asc"
+                    data-column_name="start"
+                    class="sorting">Начало <span id="start_icon"></span></th>
+                <th data-sort_type="asc"
+                    data-column_name="end"
+                    class="sorting">Конец <span id="end_icon"></span></th>
+                <th data-sort_type="asc"
+                    data-column_name="classroom"
+                    class="sorting">Класс <span id="classroom_icon"></span></th>
+                <th data-sort_type="asc"
+                    data-column_name="teacher"
+                    class="sorting">Преподаватель <span id="teacher_icon"></span></th>
+                <th data-sort_type="asc"
+                    data-column_name="organisation"
+                    class="sorting">Учреждение <span id="organisation_icon"></span></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+                @include('closed.admin.schedules.index_data')
+            </tbody>
+        </table>
+        @csrf
+        <input type="hidden" name="page" value="1">
+        <input type="hidden" name="column_name" value="id">
+        <input type="hidden" name="sort_type" value="asc">
+    </div>
+    <script src="{{ asset('js/fetchData.js') }}"></script>
 @endsection

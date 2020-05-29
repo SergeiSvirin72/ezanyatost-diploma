@@ -20,12 +20,22 @@
                    value="{{ old('name') }}" class="form-control form-control-block">
         </div>
         <div class="form-group">
-            <label>Направление:</label>
+            <label>Направление</label>
             <select name="course_id" class="form-control form-control-block">
-                <option value="">Выберите направление</option>
                 @foreach($courses as $course)
                     <option value="{{$course->id}}" {{ (old('course_id') == $course->id ? "selected":"") }}>
                         {{$course->name}}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group @if(!in_array(\Auth::user()->role_id, [1])) form-hidden @endif">
+            <label>Учреждение</label>
+            <select name="organisation_id" class="form-control form-control-block">
+                @foreach($organisations as $organisation)
+                    <option value="{{$organisation->id}}"
+                        {{ (old('organisation_id') == $organisation->id ? "selected":"") }}>
+                        {{$organisation->short_name}}
                     </option>
                 @endforeach
             </select>

@@ -24,3 +24,7 @@
     height: auto;
     max-height: 400px;
 }
+
+.home-form form {
+    max-width: 400px;
+}

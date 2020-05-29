@@ -1,7 +1,7 @@
 .contacts-upper {
 	display: flex;
 	flex-direction: row;
-	align-items: top;
+	align-items: flex-start;
 	flex-wrap: wrap;
 }
 
@@ -16,4 +16,20 @@
 
 .contacts-column .form-control {
 	width: 100%;
+}
+
+textarea {
+    height: 72px;
+    resize: vertical;
+}
+
+@media screen and (max-width: 768px) {
+    .contacts-upper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts-column:first-child {
+        margin-right: 0;
+    }
 }

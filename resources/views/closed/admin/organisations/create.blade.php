@@ -26,8 +26,13 @@
         </div>
         <div class="form-group">
             <label>Директор</label>
-            <input type="text" name="director"
-                   value="{{ old('director') }}" class="form-control form-control-block">
+            <select name="director_id" class="form-control form-control-block">
+                @foreach($directors as $director)
+                    <option value="{{$director->id}}" {{ (old('director_id') == $director->id ? "selected":"") }}>
+                        {{$director->name}}
+                    </option>
+                @endforeach
+            </select>
         </div>
         <div class="form-group">
             <label>Часы приема</label>
@@ -65,7 +70,7 @@
                    value="{{ old('website') }}" class="form-control form-control-block">
         </div>
         <div class="form-group">
-            <input type="checkbox" name="is_school">
+            <input type="checkbox" name="is_school" {{ old('is_school') ? 'checked' : ''}}>
             <label class="form-check-label">Это школа?</label>
         </div>
         <div class="form-group">

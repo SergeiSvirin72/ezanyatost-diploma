@@ -11,11 +11,21 @@ class SchedulesTableSeeder extends Seeder
      */
     public function run()
     {
-        $employments = \App\Employment::all();
+//        $teachers = \App\Teacher::all();
+//
+//        $teachers->each(function($teacher) {
+//            $schedule = factory(\App\Schedule::class, rand(1, 2))->create([
+//                'teacher_id' => $teacher->id,
+//            ]);
+//        });
 
-        $employments->each(function($employment) {
-            $schedule = factory(\App\Schedule::class, rand(1, 3))->create([
-                'employment_id' => $employment->id,
+        $associations = \App\Association::all();
+        $weights = [1, 2, 2, 2, 3];
+
+        $associations->each(function($association) use ($weights) {
+            $teacher = \App\Teacher::where('association_id', $association->id)->get()->random();
+            $schedule = factory(\App\Schedule::class, $weights[array_rand($weights)])->create([
+                'teacher_id' => $teacher->id,
             ]);
         });
     }

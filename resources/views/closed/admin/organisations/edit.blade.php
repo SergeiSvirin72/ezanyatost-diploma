@@ -27,8 +27,15 @@
         </div>
         <div class="form-group">
             <label>Директор</label>
-            <input type="text" name="director"
-                   value="{{ $organisation->director }}" class="form-control form-control-block">
+            <select name="director_id" class="form-control form-control-block">
+                <option value="">Выберите директора</option>
+                @foreach($directors as $director)
+                    <option value="{{$director->id}}"
+                        {{ ($organisation->director_id == $director->id ? "selected":"") }}>
+                        {{$director->name}}
+                    </option>
+                @endforeach
+            </select>
         </div>
         <div class="form-group">
             <label>Часы приема</label>

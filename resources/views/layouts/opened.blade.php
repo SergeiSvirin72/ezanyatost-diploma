@@ -10,6 +10,20 @@
     <link href="{{ asset('/css/opened/header.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/opened/footer.css') }}" rel="stylesheet">
     @yield('styles')
+<!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(64456888, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/64456888" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <div class="wrapper">
@@ -25,9 +39,9 @@
                     <nav>
                         <ul>
                             <li><a href="/" class="link-secondary">Главная</a></li>
-                            <li><a href="" class="link-secondary">Учреждения</a></li>
-                            <li><a href="" class="link-secondary">Мероприятия</a></li>
-                            <li><a href="" class="link-secondary">Контакты</a></li>
+                            <li><a href="/organisations" class="link-secondary">Учреждения</a></li>
+                            <li><a href="/events" class="link-secondary">Мероприятия</a></li>
+                            <li><a href="/contacts" class="link-secondary">Контакты</a></li>
                             <li><a href="{{ route('login') }}" class="btn btn-outline-primary"><i class="fas fa-user"></i> Личный кабинет</a></li>
                         </ul>
                     </nav>
@@ -42,10 +56,10 @@
                 <div class="footer-nav">
                     <h5>Навигация</h5>
                     <a href="/" class="link-primary">Главная</a>
-                    <a href="" class="link-primary">Учреждения</a>
-                    <a href="" class="link-primary">Мероприятия</a>
-                    <a href="" class="link-primary">Контакты</a>
-                    <a href="/login" class="link-primary">Личный кабинет</a>
+                    <a href="/organisations" class="link-primary">Учреждения</a>
+                    <a href="/events" class="link-primary">Мероприятия</a>
+                    <a href="/contacts" class="link-primary">Контакты</a>
+                    <a href="{{ route('login') }}" class="link-primary">Личный кабинет</a>
                 </div>
                 <div class="footer-info">
                     <h5>Правовая информация</h5>
@@ -63,4 +77,6 @@
         </footer>
     </div>
 </body>
+<script src="{{ asset('js/scrollToTop.js') }}"></script>
+<script src="{{ asset('js/responsiveNav.js') }}"></script>
 </html>
