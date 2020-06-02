@@ -224,15 +224,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\Program Files\OSPanel\domains\ezanyatost_v2\resources\views\closed\admin\involvements" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\Program Files\OSPanel\domains\ezanyatost_v2\storage\app\public" />
       <recent name="G:\Program Files\OSPanel\domains\ezanyatost_v2\storage\app" />
       <recent name="G:\Program Files\OSPanel\domains\ezanyatost_v2\public\css\opened" />
       <recent name="G:\Program Files\OSPanel\domains\ezanyatost_v2\public\css" />
       <recent name="G:\Program Files\OSPanel\domains\ezanyatost_v2\resources\views\opened" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Program Files\OSPanel\domains\ezanyatost_v2\resources\views\closed\admin\involvements" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -320,6 +320,10 @@
       <workItem from="1590571216213" duration="10409000" />
       <workItem from="1590668895670" duration="11128000" />
       <workItem from="1590742449695" duration="2422000" />
+      <workItem from="1590925612112" duration="3144000" />
+      <workItem from="1590935659581" duration="80000" />
+      <workItem from="1591003304227" duration="1378000" />
+      <workItem from="1591031920244" duration="2572000" />
     </task>
     <servers />
   </component>

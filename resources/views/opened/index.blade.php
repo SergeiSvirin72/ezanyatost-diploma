@@ -114,7 +114,7 @@
                             <div class="card">
                                 <div class="card-img">
                                     <img class="card-img-top"
-                                         src="@if($organisation->img){{asset('storage/'.$organisation->img)}}@else{{ asset('/images/noimage.jpg') }}@endif">
+                                         src="@if($organisation->img){{asset('storage/'.$organisation->img)}}@else{{ asset('/images/noimage.png') }}@endif">
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">
@@ -144,8 +144,8 @@
                 @foreach($events as $event)
                     <div class="card">
                         <div class="card-img">
-                            <img class="card-img-top"
-                                 src="@if($event->img){{asset('storage/'.$event->img)}}@else{{ asset('/images/noimage.jpg') }}@endif">
+                            <img class="card-img-top" style="object-fit: contain;"
+                                 src="@if($event->img){{asset('storage/'.$event->img)}}@else{{ asset('/images/noimage.png') }}@endif">
                         </div>
                         <div class="card-body">
                             <h5><a href="/events/{{$event->id}}" class="link-secondary">{{$event->name}}</a></h5>

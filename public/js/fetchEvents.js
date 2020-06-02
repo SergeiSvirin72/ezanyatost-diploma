@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     dropdown.addEventListener('change', fetchEvents);
 
     function fetchEvents() {
+        console.log(document.forms.fetch);
         fetch('/events/fetch', {
             method: 'POST',
             headers: {
