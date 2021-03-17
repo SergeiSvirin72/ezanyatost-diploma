@@ -15,6 +15,8 @@
 
 ## Видео-презантация
 
+![ВКР - 2 минуты (5)](https://user-images.githubusercontent.com/80316360/111450027-05729d00-8721-11eb-86a0-2ab41d866cbd.gif)
+
 https://user-images.githubusercontent.com/80316360/111447000-0e15a400-871e-11eb-8698-3a3e3398ba62.mp4
 
 
