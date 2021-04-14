@@ -33,9 +33,9 @@ class DatabaseSeeder extends Seeder
 //            StudentsTableSeeder::class,
 //            StatusStudentSeeder::class,
 //            InvolvementsTableSeeder::class,
-//
-//            HomeworkSeeder::class,
-//            EventsTableSeeder::class,
+
+            HomeworksTableSeeder::class,
+            EventsTableSeeder::class,
             AttendancesTableSeeder::class,
         ]);
     }
